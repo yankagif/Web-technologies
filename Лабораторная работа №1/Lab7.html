@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<script type="text/javascript">
+		function arr(){
+subject = new Array("Математика"," Физика"," Химия"," Информатика"," Литература"," Иностранный язык",
+" Психология"," История"," Обществознание"," Русский язык");
+exact_sciences = new Array();
+exact_sciences=subject.slice(0,4);
+humanitarian_sciences = new Array();
+humanitarian_sciences=subject.slice(4,10);
+document.write("Точные науки: "+exact_sciences);
+document.write("<br>Гуманитарные науки: "+humanitarian_sciences);
+		}
+	</script>
+	<meta charset="UTF-8">
+	<title>Задание 7</title>
+</head>
+<body>
+	<script language>
+arr();
+</script> 
+</body>
+</html>
