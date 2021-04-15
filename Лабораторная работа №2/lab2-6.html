@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Задание 6</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script type="text/javascript">
+		var chicken = 0;
+		var egg = 0;
+		function quiz1(){
+			chicken = chicken+1;
+		}
+
+		function quiz2(){
+		egg = egg+1;
+}
+
+		function result(){
+		var all = chicken+egg;
+		var chickenPct = Math.round((chicken/all)*100);
+		var eggPct = 100-chickenPct;
+		$("#a").html("Количество проголосовавших равно "+all);
+		$("#c").html("За курицу проголосовало "+chickenPct+"%");
+		$("#e").html("За яйцо проголосовало "+eggPct+"%");
+}
+	</script>
+	<style>
+		label{
+			font: 16pt sans-serif;
+		}
+
+		.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 4px 4px;
+    border-radius: 100%;
+}
+
+		.result{
+    background-color: #ff6600;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 100%;
+		}
+	</style>
+</head>
+<body>
+	<form id="f">
+		<h1>Вопрос века</h1>
+		<label>Что появилось раньше курица или яйцо?</label></br>
+		<input class="button" type="button" onclick="quiz1()" id="rad1" value="Курица">
+		<input class="button" type="button" onclick="quiz2()" id="rad2" value=" Яйцо "></br></br>
+		<input class="result" type="button" id="rez" onclick="result()" value="Результаты">
+		<p id="a"></p>
+		<p id="c"></p>
+		<p id="e"></p>
+	</form>
+</body>
+</html>

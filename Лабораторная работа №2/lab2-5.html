@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title>Задание 5</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<style>
+	.ballStyle{
+		width: 50px;
+		height: 50px;
+	}
+</style>
+</head>
+<body>
+	<img class="ballStyle" src="ball.jpg" alt="ball" id="ballImg">
+	<script type="text/javascript">
+
+var img = document.getElementById("ballImg");
+
+img.onmousedown = function(e) {
+var coords = getCoords(img);
+var shiftX = e.pageX - coords.left;
+var shiftY = e.pageY - coords.top;
+img.style.position = 'absolute';
+document.body.appendChild(img);
+moveAt(e);
+img.style.zIndex = 1000;
+
+function moveAt(e) {
+img.style.left = e.pageX - shiftX + 'px';
+img.style.top = e.pageY - shiftY + 'px';
+}
+
+document.onmousemove = function(e) {
+moveAt(e);
+};
+
+img.onmouseup = function() {
+document.onmousemove = null;
+img.onmouseup = null;
+};
+}
+
+img.ondragstart = function() {
+return false;
+};
+
+function getCoords(elem) { 
+var box = elem.getBoundingClientRect();
+return {
+top: box.top + pageYOffset,
+left: box.left + pageXOffset
+};
+}
+
+</script> 
+</body>
+</html>

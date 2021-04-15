@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Задание 3</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script>
+	function upper(){
+		$("#picture").animate({top: "150px"}, 500);
+}
+
+	function down(){
+		$("#picture").animate({top: "350px"}, 500);
+}
+
+	function left(){
+		$("#picture").animate({left: "600px"}, 500);
+}
+
+	function rigth(){
+		$("#picture").animate({left: "800px"}, 500);
+}
+
+	function defaultP(){
+		$("#picture").animate({top: "250px", left: "700px"}, 500);
+	}
+	</script>
+	<style>
+		.pic{
+			position: absolute;
+			width: 150px;
+			height: 150px;
+			top: 250px;
+			left: 700px;
+
+		}
+
+		.up{
+			width: 50px;
+			height: 50px;
+		}
+
+		.down{
+			width: 50px;
+			height: 50px;
+		}
+
+		.left{
+			width: 50px;
+			height: 50px;
+		}
+
+		.rigth{
+			width: 50px;
+			height: 50px;
+		}
+
+		.def{
+			width: 150px;
+			height: 50px;
+		}
+
+	</style>
+</head>
+<body>
+	<img class="pic" src="Skam.jpg" alt="Skam" id="picture">
+	<input class="up" type="button" id="up" onclick="upper()" value="Вверх" >
+	<input class="down" type="button" id="down" onclick="down()" value="Вниз">
+	<input class="left" type="button" id="left" onclick="left()" value="Лево">
+	<input class="rigth" type="button" id="rigth" onclick="rigth()" value="Право">
+	<input class="def" type="button" id="def" onclick="defaultP()" value="Исходное положение">
+</body>
+</html>

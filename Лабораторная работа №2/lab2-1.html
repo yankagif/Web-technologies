@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Задание 1</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<style>
+		body {
+			background-color: white;
+		}
+	</style>
+	<script type="text/javascript">
+	function buttonClick(){
+	let a =Math.round(Math.random()*5);
+	switch(a){
+		case 0:
+$("body").css("backgroundColor", "green");
+		break;
+
+		case 1:
+$("body").css("backgroundColor", "blue");
+		break;
+
+		case 2:
+$("body").css("backgroundColor", "red");
+		break;
+
+		case 3:
+$("body").css("backgroundColor", "yellow");
+		break;
+
+		case 4:
+$("body").css("backgroundColor", "brown");
+		break;
+
+		case 5:
+$("body").css("backgroundColor", "cyan");
+		break;
+	}
+}
+
+	</script>
+</head>
+<body>
+	<input type="button" id="button" onclick="buttonClick()" value="change color" >
+	<a href="tree.html">Меню заданий</a>
+</body>
+</html>
