@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+    <item>
+        <id>1</id>
+        <name>Старцев Ю.В.</name>
+        <email>startcevy@mail.ru</email>
+        <value>Сообщение!</value>
+    </item>
+    <item>
+        <id>2</id>
+        <name>Конев К.А.</name>
+        <email>sireo@rambler.ru</email>
+        <value>Здравствуйте!</value>
+    </item>
+    <item>
+        <id>3</id>
+        <name>Ярцев Р.А.</name>
+        <email>rust-66@yandex.ru</email>
+        <value>Здравствуйте!</value>
+    </item>
+<item><id>4</id><name>Яна</name><email>Yana@.gmail.com</email><value>Хороший сайт!</value></item></items>
