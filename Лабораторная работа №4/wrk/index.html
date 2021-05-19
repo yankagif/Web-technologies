@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" type="text/css" href="js/jquery-ui-1.12.1.custom/jquery-ui.css">
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+
+	<title>Вкусные шашлыки</title>
+</head>
+<body>
+	<header class="head">
+
+	</header>
+
+<main class="main">
+
+	<div class="content_box">
+		<div class="main_title">
+			Виды мяса
+		</div>
+
+		<div class="container content" id="acc_con">
+	<div class="stage" id="accordion">
+		<h3>Свинина</h3>
+		<div>
+			<img src="img/svinina.jpg" alt="Свинина" class="picture">
+			<p>Нежное мясо свинины, имеющее мягкую структуру волокон, идеально подходит для приготовления шашлыка. Его чарующий запах и нежный вкус может свести с ума любого гурмана.
+			<p>Для приготовления сочного шашлыка из свинины оптимально подойдет шея, корейка, почечное мясо. Оно в достаточном количестве имеет жировые прослойки, но в то же время не имеет переизбытка сала.
+			<p>При приготовлении по-настоящему вкусного шашлыка первостепенным является и вопрос маринада. Помимо лука, зелени и пряностей для маринования свинины используют пиво, квас, сухое вино, свежие соки из фруктов – яблок, томатов, гранатов…
+		</div>
+
+		<h3>Говядина</h3>
+		<div>
+			<img src="img/baranina.jpg" alt="Баранина" class="picture">
+			<p>Баранина – один из самых популярных видов мяса, предназначенных для приготовления этого потрясающего блюда. Вкус нежнейшего мяса, приправленного кисло-сладким соусом и дополненного ароматным вином, убеждает отдать предпочтение именно баранине.
+
+			<p>Для приготовления блюда лучше выбирать молодую и нежирную баранину, выбирая почечную и шейноспинную части, шею и грудинку. Маринад для шашлыка призван не только придать сочность суховатому мясу, но подчеркнуть особенный вкус баранины. Удивительно мягкое мясо можно получить, замариновав баранину в слабогазированной минеральной воде с добавлением лимонного сока. Отлично гармонируют со вкусом баранины и маринады с восточным оттенком на основе томатного сока и аджики. Приятный аромат мясу придадут: душица, розмарин, оригано, тимьян, чабрец и различные виды перца.
+		</div>
+
+		<h3>Курица</h3>
+		<div>
+			<img src="img/kurica.jpg" alt="Курица" class="picture">
+			<p>Куриное мясо более нежное, чем та же баранина или свинина. Для приготовления блюда используют жирные части тушки: бедра, окорочка, голени, крылья. Выбирая грудинку, следует быть готовым к тому, что шашлык из курицы будет несколько суховат.
+
+			<p>Существует множество способов приправить нежирное мясо. Изысканный результат можно получить, выдержав курицу в маринаде на основе джина или виски. Расширить палитру вкусовых ощущений помогут мускатный орех, имбирь, куркума. Своим присутствием эти специи не затмят вкус курятины, а лишь подчеркнут блюдо, сформировав на кусочках мяса аппетитную корочку.
+		</div>
+	</div>
+		</div>
+		<br>
+		<div id="dialog" class="dialog" title="Оформление заказа">
+		<form class="form-inline">
+		<div class="form-group">
+		<label >ФИО</label><br>
+		<input type="text" name="name" id="name">
+		<p>
+
+		<label for="weight">Вес, кг:</label>
+		<input type="text" name="weight" id="weight">
+		<p>
+		<div id="slider"></div>
+		<p>
+
+		<label for="meat">Выберите мясо:</label>
+		<input type="text" name="example" list="lst" id="meat">
+		<datalist id="lst">
+		<option value="Свинина">
+		<option value="Говядина">
+		<option value="Курица">
+		</datalist>
+		<p>
+
+		<label for="date">Дата: </label>
+		<input type="text" class="form-control" id="date">
+		<p>
+		<label for="town">Введите город:</label>
+		<input type="text" class="form-control" id="town">
+		<p>
+
+		<label for="street">Введите улицу:</label>
+		<input type="text" id="street">
+		<p>
+
+		<input type="text" id="promocod"placeholder="Промокод"><span id="tip" title="Промокод можно получить при заказе от 2000 рублей."> ?</span>
+		<p>
+		</div>
+		</form>
+		</div>
+		<button class="btn" id="open" >Оформить заказ!</button>
+		</div>
+	</div>
+</main>
+
+	<div id="confirm" class="confirm" title="Подтверждение" style="display: none;">
+		<div class="confirmName" id="confirmName">
+			<label for="cN">Заказ на имя: </label>
+			<input type="text" name="cN" id="cN">
+			<p>
+			<label for="Kg">Вес: </label>
+			<input type="text" name="Kg" id="Kg">
+			<p>
+			<label for="M">Вид мяса: </label>
+			<input type="text" name="M" id="M">
+			<p>
+			<label for="D">Дата: </label>
+			<input type="text" name="D" id="D">
+			<p>
+			<label for="T">Город: </label>
+			<input type="text" name="T" id="T">
+			<p>
+			<label for="S">Улица: </label>
+			<input type="text" name="S" id="S">
+			<p>
+			<label for="P">Промокод: </label>
+			<input type="text" name="P" id="P">
+			<p>
+			<label for="Price">Цена: </label>
+			<input type="text" name="Price" id="Price">
+			<h2>Оформить данный заказ?</h2>
+		</div>
+	</div>
+
+	<div id="succ" class="succ" title="Уведомление" style="display: none;"><h2>Ваш заказ принят в обработку.</h2></div>
+</body>
+</html>

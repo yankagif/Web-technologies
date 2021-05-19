@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Лабораторная работа 4</title>
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+<script src="script.js"></script>
+</head>
+<body>
+
+<h1>Аккордион</h1>
+<div class="container content">
+	<div id="accordion">
+		<h3>Что такое Lorem Ipsum?</h3>
+		<div>
+			<p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+		</div>
+
+		<h3>Откуда он появился?</h3>
+		<div>
+			<p>Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, "consectetur", и занялся его поисками в классической латинской литературе. В результате он нашёл неоспоримый первоисточник Lorem Ipsum в разделах 1.10.32 и 1.10.33 книги "de Finibus Bonorum et Malorum" ("О пределах добра и зла"), написанной Цицероном в 45 году н.э. Этот трактат по теории этики был очень популярен в эпоху Возрождения. Первая строка Lorem Ipsum, "Lorem ipsum dolor sit amet..", происходит от одной из строк в разделе 1.10.32
+
+			Классический текст Lorem Ipsum, используемый с XVI века, приведён ниже. Также даны разделы 1.10.32 и 1.10.33 "de Finibus Bonorum et Malorum" Цицерона и их английский перевод, сделанный H. Rackham, 1914 год.</p>
+		</div>
+
+		<h3>Почему он используется?</h3>
+		<div>
+			<p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).</p>
+		</div>
+	</div>
+</div>
+<br>
+
+<h1>Поиск</h1>
+<form class="form-inline">
+	<div class="form-group">
+		<label for="search">Поиск: </label>
+		<input type="text" class="form-control" id="search">
+	</div>
+</form>
+<br>
+
+<h1>Календарь</h1>
+<div class="container content">
+	<form class="form-inline">
+	<div class="form-group">
+		<label for="date">Дата: </label>
+		<input type="text" class="form-control" id="date">
+	</div>
+</form>
+</div>
+<br>
+
+<h1>Диалоговое окно</h1>
+<div id="dialog">
+	<p>Это диалоговое окно...</p>
+</div>
+<button class="btn btn-success" id="open">Открыть окно</button>
+<br>
+
+<h1>Selectmenu</h1>
+<select id="select">
+<option>Item 1</option>
+<option>Item 2</option>
+<option>Item 3</option>
+<option>Item 4</option>
+<option>Item 5</option>
+</select>
+<br>
+
+<h1>Menu</h1>
+<ul id="menu">
+	<li><a href="#">Books</a></li>
+	<li><a href="#">Clothing</a></li>
+	<li><a href="#">Electronics</a>
+		<ul>
+		<li><a href="#">Car Hifi</a></li>
+		<li><a href="#">Utilities</a></li>
+		</ul>
+	</li>
+	<li><a href="#">Movies</a></li>
+</ul> 
+<br>
+
+<h1>Slider</h1>
+<div class="container content">
+	<div class="row">
+		<div class="col-md-6">
+			<form class="form-inline">
+				<div class="form-group">
+					<label for="start">Начальная цена</label>
+					<input type="text" name="start" class="form-control" id="start">
+				</div>
+				<div class="form-group">
+					<label for="end">Конечная цена</label>
+					<input type="text" name="end" class="form-control" id="end">
+				</div>
+			</form>
+			<br>
+			<div id="slider"></div>
+		</div>
+	</div>
+</div>
+<br>
+
+<h1>Tabs</h1>
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">Вкладка 1</a></li>
+		<li><a href="#tabs-2">Вкладка 2</a></li>
+		<li><a href="#tabs-3">Вкладка 3</a></li>
+	</ul>
+
+	<div id="tabs-1">
+		<h2>Контент вкладки 1</h2>
+		<p>Lorem ipsum dolor <a href=”#” title="ПОДСКАЗКА">sit amet</a>, consectetur adipisicing elit. Ex, labore!</p>
+	</div>
+
+	<div id="tabs-2">
+			<h2>Контент вкладки 2</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, labore!</p>
+	</div>
+
+	<div id="tabs-3">
+		<h2>Контент вкладки 3</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, labore!</p>
+	</div>
+</div>
+<br>
+
+<h1>Sortable</h1>
+<ul id="sort" class="list-group">
+	<li class="list-group-item"><a href="#">Item 1</a></li>
+	<li class="list-group-item"><a href="#">Item 2</a></li>
+	<li class="list-group-item"><a href="#">Item 3</a></li>
+	<li class="list-group-item"><a href="#">Item 4</a></li>
+	<li class="list-group-item"><a href="#">Item 5</a></li>
+</ul> 
+<br>
+
+<h1>Draggable</h1>
+<div class="draggable"> 
+<p>Это перетаскиваемый блок.</p>
+</div>
+<br>
+
+</body>
+</html>

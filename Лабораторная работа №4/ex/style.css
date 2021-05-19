@@ -1,0 +1,13 @@
+body{
+	margin: 50px;
+}
+
+#menu{
+	width: 150px;
+	display: block;
+	text-decoration: none;
+}
+
+.list-group-item{
+	cursor: move;
+} 
